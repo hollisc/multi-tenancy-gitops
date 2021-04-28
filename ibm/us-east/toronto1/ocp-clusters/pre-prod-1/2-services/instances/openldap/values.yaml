@@ -20,7 +20,7 @@ openldap:
     SeedUsers:
       usergroup: "apps"
       userlist: "app,springapp,quarkusapp,mqapp"
-      initialPassword: "redhat"
+      initialPassword: "app"
 
   PhpLdapAdmin:
     Image: "docker.io/osixia/phpldapadmin"
