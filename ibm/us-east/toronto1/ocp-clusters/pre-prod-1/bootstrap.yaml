@@ -50,6 +50,9 @@ spec:
     server: https://kubernetes.default.svc
   - namespace: sealed-secrets
     server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+  - group: "cert-manager.io"
+    kind: ClusterIssuer
   roles:
   # A role which provides read-only access to all applications in the project
   - name: read-only
@@ -68,7 +71,7 @@ spec:
   - https://github.com/hollisc/multi-tenancy-gitops.git
   destinations:
   - namespace: ci
-    server: https://kubernetes.default.svc        
+    server: https://kubernetes.default.svc
   - namespace: dev
     server: https://kubernetes.default.svc
   - namespace: qa
