@@ -11,4 +11,7 @@ spec:
     path: ibm/us-east/toronto1/ocp-clusters/pre-prod-1/2-services/instances/cert-manager
     repoURL: https://github.com/hollisc/multi-tenancy-gitops.git
     targetRevision: demo2-mq
-  syncPolicy: {}
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true    
