@@ -4,4 +4,4 @@ metadata:
   name: selfsigned-cluster-issuer
 spec:
   ca:
-    secretName: ca-key-pair
+    secretName: self-signed-ca-key-pair
