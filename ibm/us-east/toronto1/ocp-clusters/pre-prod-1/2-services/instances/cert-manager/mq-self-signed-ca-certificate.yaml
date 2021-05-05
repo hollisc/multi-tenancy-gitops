@@ -3,19 +3,10 @@ kind: Certificate
 metadata:
   name: mq-self-signed-ca-cert
 spec:
-  dnsNames:
-    - >-
-      *.gitops-sandbox2-6ccd7f378ae819553d37d5f2ee142bd6-0000.tor01.containers.appdomain.cloud
-  privateKey:
-    algorithm: RSA
-    encoding: PKCS1
-    size: 2048
   isCA: true
+  commonName: *.tor01.containers.appdomain.cloud
+  secretName: mq-self-signed-ca-cert
   issuerRef:
     group: cert-manager.io
     kind: ClusterIssuer
     name: selfsigned-cluster-issuer
-  secretName: mq-self-signed-ca-cert
-  subject:
-    organizations:
-    - ibm
