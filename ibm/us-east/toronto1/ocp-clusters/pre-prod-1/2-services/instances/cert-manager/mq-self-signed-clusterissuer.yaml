@@ -4,4 +4,4 @@ metadata:
   name: selfsigned-mq-cluster-issuer
 spec:
   ca:
-    secretName: ca-key-pair
+    secretName: mq-self-signed-ca-cert
