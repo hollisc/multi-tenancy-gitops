@@ -3,6 +3,7 @@ kind: Certificate
 metadata:
   name: mq-self-signed-ca-cert
 spec:
+  commonName: any.common.name
   isCA: true
   dnsNames:
     - >-
