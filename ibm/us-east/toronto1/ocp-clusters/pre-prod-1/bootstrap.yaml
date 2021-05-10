@@ -11,9 +11,9 @@ spec:
     server: https://kubernetes.default.svc
   - namespace: dev
     server: https://kubernetes.default.svc
-  - namespace: qa
-    server: https://kubernetes.default.svc
   - namespace: staging
+    server: https://kubernetes.default.svc
+  - namespace: prod
     server: https://kubernetes.default.svc
   roles:
   # A role which provides read-only access to all applications in the project
@@ -42,9 +42,9 @@ spec:
     server: https://kubernetes.default.svc
   - namespace: dev
     server: https://kubernetes.default.svc
-  - namespace: qa
-    server: https://kubernetes.default.svc
   - namespace: staging
+    server: https://kubernetes.default.svc
+  - namespace: prod
     server: https://kubernetes.default.svc
   - namespace: openldap
     server: https://kubernetes.default.svc
@@ -74,9 +74,9 @@ spec:
     server: https://kubernetes.default.svc
   - namespace: dev
     server: https://kubernetes.default.svc
-  - namespace: qa
-    server: https://kubernetes.default.svc
   - namespace: staging
+    server: https://kubernetes.default.svc
+  - namespace: prod
     server: https://kubernetes.default.svc
   - namespace: openldap
     server: https://kubernetes.default.svc
