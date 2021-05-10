@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ci-secrets
+  name: ci-roles
 spec:
   destination:
     namespace: ci
