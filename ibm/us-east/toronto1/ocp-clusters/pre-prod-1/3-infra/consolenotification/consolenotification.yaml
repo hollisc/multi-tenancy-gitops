@@ -1,0 +1,8 @@
+apiVersion: console.openshift.io/v1
+kind: ConsoleNotification
+metadata:
+  name: banner-env
+spec:
+  backgroundColor: purple
+  location: BannerTop
+  text: OCP 46 Env - GitOps Sandbox - MQ
