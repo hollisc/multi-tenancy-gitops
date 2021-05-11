@@ -1,4 +1,88 @@
-global: {}
-mq-infra:
-  name: qm-staging
-  version: 9.2.0.0-r1
+# Default values for ibm-mq.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+name: qm-staging
+version: 9.2.0.0-r1
+web:
+  enabled: true
+
+license:
+  accept: true
+  license: L-RJON-BN7PN3
+  metric: ProcessorValueUnit
+  use: NonProduction
+
+image:
+  repository: replace
+  tag: replace
+  pullPolicy: Always
+
+queuemanager:
+  availability:
+    type: SingleInstance
+  debug: false
+  imagePullPolicy: IfNotPresent
+  livenessProbe:
+    failureThreshold: 1
+    initialDelaySeconds: 90
+    periodSeconds: 10
+    successThreshold: 1
+    timeoutSeconds: 5
+  logFormat: Basic
+  metrics:
+    enabled: true
+  name: QUICKSTART
+  readinessProbe:
+    failureThreshold: 1
+    initialDelaySeconds: 10
+    periodSeconds: 5
+    successThreshold: 1
+    timeoutSeconds: 3
+  resources:
+    limits:
+      cpu: "1"
+      memory: 1Gi
+    requests:
+      cpu: "1"
+      memory: 1Gi
+  storage:
+    persistedData:
+      enabled: false
+    queueManager:
+      type: ephemeral
+    recoveryLogs:
+      enabled: false
+
+mqsc:
+  configmap: mqsc-configmap
+  name: config.mqsc
+
+ini:
+  configmap:
+  name:
+
+securityContext:
+  initVolumeAsRoot: false
+
+template:
+  pod:
+    containers:
+    - name: qmgr
+      # env:
+      # - name: MQSNOAUT
+      #   value: "yes"
+
+configmap:
+  path: config
+
+cert:
+  secretName: mq-server-cert
+
+terminationGracePeriodSeconds: 30
+
+tracing:
+  agent: {}
+  collector: {}
+  enabled: false
+  namespace: ""
