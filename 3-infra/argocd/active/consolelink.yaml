@@ -14,7 +14,7 @@ spec:
   source:
     path: 3-infra/consolelink
     repoURL: https://github.com/hollisc/multi-tenancy-gitops.git
-    targetRevision: master
+    targetRevision: gitops-sb4
   syncPolicy:
     automated:
       prune: true

@@ -57,7 +57,7 @@ spec:
   source:
     path: 3-infra/argocd/active
     repoURL: https://github.com/hollisc/multi-tenancy-gitops.git
-    targetRevision: master
+    targetRevision: gitops-sb4
   syncPolicy:
     automated:
       prune: true

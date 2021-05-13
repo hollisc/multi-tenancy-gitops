@@ -16,7 +16,7 @@ spec:
   source:
     path: 2-services/operators/elasticsearch
     repoURL: https://github.com/hollisc/multi-tenancy-gitops.git
-    targetRevision: master
+    targetRevision: gitops-sb4
     helm:
       valueFiles:
       - values.yaml

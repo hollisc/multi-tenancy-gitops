@@ -78,7 +78,7 @@ spec:
   source:
     path: 2-services/argocd/active/operators
     repoURL: https://github.com/hollisc/multi-tenancy-gitops.git
-    targetRevision: master
+    targetRevision: gitops-sb4
   syncPolicy:
     automated:
       prune: true
@@ -98,7 +98,7 @@ spec:
   source:
     path: 2-services/argocd/active/instances
     repoURL: https://github.com/hollisc/multi-tenancy-gitops.git
-    targetRevision: master
+    targetRevision: gitops-sb4
   syncPolicy:
     automated:
       prune: true
