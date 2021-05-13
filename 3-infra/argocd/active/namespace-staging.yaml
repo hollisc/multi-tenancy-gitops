@@ -1,14 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: bootstrap
+  name: namespace-staging
+  annotations:
+    argocd.argoproj.io/sync-wave: "100"   
 spec:
   destination:
-    namespace: openshift-gitops
+    namespace: staging
     server: https://kubernetes.default.svc
-  project: default
+  project: infra
   source:
-    path: 0-bootstrap/argocd/active
+    path: 3-infra/namespaces/staging
     repoURL: https://github.com/hollisc/multi-tenancy-gitops.git
     targetRevision: master
   syncPolicy:

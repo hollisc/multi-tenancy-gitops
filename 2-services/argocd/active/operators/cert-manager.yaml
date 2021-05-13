@@ -1,11 +1,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ibm-cp4i-operators
+  name: cert-manager
   annotations:
-    argocd.argoproj.io/sync-wave: "230"
+    argocd.argoproj.io/sync-wave: "200"
   labels:
-    gitops.tier.group: ibm-cloudpak    
+    gitops.tier.group: cntk
   finalizers:
     - resources-finalizer.argocd.argoproj.io  
 spec:
@@ -14,12 +14,9 @@ spec:
     server: 'https://kubernetes.default.svc'
   project: services
   source:
-    path: 2-services/operators/ibm-cp4i-operators
+    path: 2-services/operators/cert-manager
     repoURL: https://github.com/hollisc/multi-tenancy-gitops.git
     targetRevision: master
-    helm:
-      valueFiles:
-      - values.yaml
   syncPolicy:
     automated:
       prune: true
