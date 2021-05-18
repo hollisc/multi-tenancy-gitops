@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: instana-agent
+  name: namespace-instana-agent
   annotations:
     argocd.argoproj.io/sync-wave: "100"   
 spec:
