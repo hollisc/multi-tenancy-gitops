@@ -57,6 +57,10 @@ spec:
     kind: routes
   - group: ""
     kind: RoleBinding
+  - group: ""
+    kind: ClusterRoleBinding    
+  - group: ""
+    kind: ClusterRole    
   roles:
   # A role which provides read-only access to all applications in the project
   - name: read-only
