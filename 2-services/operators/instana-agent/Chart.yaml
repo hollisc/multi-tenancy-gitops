@@ -7,4 +7,4 @@ appVersion: "1.0"
 dependencies:
   - name: instana-agent-operator
     version: 0.1.2
-    repository: https://hollisc.github.io/toolkit-charts/
+    repository: https://hollisc.github.io/gitops-testing/
