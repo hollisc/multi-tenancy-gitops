@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cert-manager-instance
+  name: instana-agent-instance
   annotations:
     argocd.argoproj.io/sync-wave: "300"
   labels:
     gitops.tier.group: cntk    
 spec:
   destination:
-    namespace: openshift-operators
+    namespace: instana-agent
     server: 'https://kubernetes.default.svc'
   project: services
   source:
