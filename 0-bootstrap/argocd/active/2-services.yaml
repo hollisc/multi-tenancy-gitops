@@ -57,9 +57,9 @@ spec:
     kind: routes
   - group: ""
     kind: RoleBinding
-  - group: ""
+  - group: "rbac.authorization.k8s.io"
     kind: ClusterRoleBinding    
-  - group: ""
+  - group: "rbac.authorization.k8s.io"
     kind: ClusterRole    
   roles:
   # A role which provides read-only access to all applications in the project
