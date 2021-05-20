@@ -57,7 +57,7 @@ setup-job:
 
 tool-config:
   name: Artifactory
-  url: 'https://artifactory-tools.<Cluster-Domain>'
+  url: 'https://artifactory-tools.rosa-east-2.05q1.p1.openshiftapps.com'
   privateUrl: 'http://artifactory-artifactory.tools:8082'
   username: admin
   password: password
