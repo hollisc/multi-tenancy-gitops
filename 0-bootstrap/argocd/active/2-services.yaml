@@ -28,9 +28,7 @@ spec:
   - namespace: istio-system
     server: https://kubernetes.default.svc
   - namespace: openldap
-    server: https://kubernetes.default.svc
-  - namespace: instana-agent     
-    server: https://kubernetes.default.svc     
+    server: https://kubernetes.default.svc  
   clusterResourceWhitelist:
   # TODO: SCC needs to be moved to 3-infra, here for now for artifactory
   - group: "security.openshift.io"
@@ -57,10 +55,6 @@ spec:
     kind: routes
   - group: ""
     kind: RoleBinding
-  - group: "rbac.authorization.k8s.io"
-    kind: ClusterRoleBinding    
-  - group: "rbac.authorization.k8s.io"
-    kind: ClusterRole    
   roles:
   # A role which provides read-only access to all applications in the project
   - name: read-only
