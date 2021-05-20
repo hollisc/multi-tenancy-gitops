@@ -25,6 +25,8 @@ spec:
     server: https://kubernetes.default.svc
   - namespace: instana-agent     
     server: https://kubernetes.default.svc 
+  - namespace: openshift-operators
+    server: https://kubernetes.default.svc     
   clusterResourceWhitelist:
   - group: ""
     kind: Namespace
