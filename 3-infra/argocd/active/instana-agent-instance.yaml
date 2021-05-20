@@ -12,7 +12,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   project: infra
   source:
-    path: 3-ifnra/instances/instana-agent
+    path: 3-infra/instances/instana-agent
     repoURL: https://github.com/hollisc/multi-tenancy-gitops.git
     targetRevision: gitops-sb4
   syncPolicy:
