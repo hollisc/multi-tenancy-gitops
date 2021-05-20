@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: instana-agent
   annotations:
-    argocd.argoproj.io/sync-wave: "200"
+    argocd.argoproj.io/sync-wave: "100"
   labels:
     gitops.tier.group: cntk
   finalizers:
@@ -12,9 +12,9 @@ spec:
   destination:
     namespace: openshift-operators
     server: https://kubernetes.default.svc
-  project: services
+  project: infra
   source:
-    path: 2-services/operators/instana-agent
+    path: 3-infra/operators/instana-agent
     repoURL: https://github.com/hollisc/multi-tenancy-gitops.git
     targetRevision: gitops-sb4
     helm:
