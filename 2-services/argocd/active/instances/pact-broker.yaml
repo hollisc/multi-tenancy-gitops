@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: swaggereditor
+  name: pact-broker
 spec:
   destination:
     namespace: tools
     server: 'https://kubernetes.default.svc'
   project: services
   source:
-    path: 2-services/instances/swaggereditor
-    repoURL: https://github.com/<github-org>/multi-tenancy-gitops.git
-    targetRevision: <github-branch>
+    path: 2-services/instances/pact-broker
+    repoURL: https://github.com/hollisc/multi-tenancy-gitops.git
+    targetRevision: rosa-useast-mq
     helm:
       valueFiles:
       - values.yaml

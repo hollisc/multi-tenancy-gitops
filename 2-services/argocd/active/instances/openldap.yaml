@@ -9,8 +9,8 @@ spec:
   project: services
   source:
     path: 2-services/instances/openldap
-    repoURL: https://github.com/<github-org>/multi-tenancy-gitops.git
-    targetRevision: <github-branch>
+    repoURL: https://github.com/hollisc/multi-tenancy-gitops.git
+    targetRevision: rosa-useast-mq
     helm:
       valueFiles:
       - values.yaml

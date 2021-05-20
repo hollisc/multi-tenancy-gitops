@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: artifactory
+  name: jaeger
 spec:
   destination:
-    namespace: tools
+    namespace: openshift-operators
     server: 'https://kubernetes.default.svc'
   project: services
   source:
-    path: 2-services/instances/artifactory
-    repoURL: https://github.com/<github-org>/multi-tenancy-gitops.git
-    targetRevision: <github-branch>
+    path: 2-services/operators/jaeger
+    repoURL: https://github.com/hollisc/multi-tenancy-gitops.git
+    targetRevision: rosa-useast-mq
     helm:
       valueFiles:
       - values.yaml

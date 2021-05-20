@@ -9,8 +9,8 @@ spec:
   project: infra
   source:
     path: 3-infra/namespaces/staging
-    repoURL: https://github.com/<github-org>/multi-tenancy-gitops.git
-    targetRevision: <github-branch>
+    repoURL: https://github.com/hollisc/multi-tenancy-gitops.git
+    targetRevision: rosa-useast-mq
   syncPolicy:
     automated:
       prune: true

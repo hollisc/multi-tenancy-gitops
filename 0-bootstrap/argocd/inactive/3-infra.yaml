@@ -5,7 +5,7 @@ metadata:
   name: infra
 spec:
   sourceRepos:
-  - https://github.com/<github-org>/multi-tenancy-gitops.git
+  - https://github.com/hollisc/multi-tenancy-gitops.git
   destinations:
   - namespace: ci
     server: https://kubernetes.default.svc
@@ -54,8 +54,8 @@ spec:
   project: default
   source:
     path: 3-infra/argocd/active
-    repoURL: https://github.com/<github-org>/multi-tenancy-gitops.git
-    targetRevision: <github-branch>
+    repoURL: https://github.com/hollisc/multi-tenancy-gitops.git
+    targetRevision: rosa-useast-mq
   syncPolicy:
     automated:
       prune: true

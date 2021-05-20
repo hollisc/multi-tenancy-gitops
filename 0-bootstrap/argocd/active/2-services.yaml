@@ -5,7 +5,7 @@ metadata:
   name: services
 spec:
   sourceRepos:
-  - https://github.com/<github-org>/multi-tenancy-gitops.git
+  - https://github.com/hollisc/multi-tenancy-gitops.git
   - https://github.com/IBM/ibm-garage-tekton-tasks.git
   destinations:
   - namespace: tools
@@ -80,8 +80,8 @@ spec:
   project: default
   source:
     path: 2-services/argocd/active/operators
-    repoURL: https://github.com/<github-org>/multi-tenancy-gitops.git
-    targetRevision: <github-branch>
+    repoURL: https://github.com/hollisc/multi-tenancy-gitops.git
+    targetRevision: rosa-useast-mq
   syncPolicy:
     automated:
       prune: true
@@ -98,8 +98,8 @@ spec:
   project: default
   source:
     path: 2-services/argocd/active/instances
-    repoURL: https://github.com/<github-org>/multi-tenancy-gitops.git
-    targetRevision: <github-branch>
+    repoURL: https://github.com/hollisc/multi-tenancy-gitops.git
+    targetRevision: rosa-useast-mq
   syncPolicy:
     automated:
       prune: true

@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     path: 0-bootstrap/argocd/active
-    repoURL: https://github.com/<github-org>/multi-tenancy-gitops.git
-    targetRevision: <github-branch>
+    repoURL: https://github.com/hollisc/multi-tenancy-gitops.git
+    targetRevision: rosa-useast-mq
   syncPolicy: {}
 ---

@@ -9,8 +9,8 @@ spec:
   project: applications
   source:
     path: 1-apps/instances/namespace-dev/mq-spring-app
-    repoURL: https://github.com/<github-org>/multi-tenancy-gitops.git
-    targetRevision: <github-branch>
+    repoURL: https://github.com/hollisc/multi-tenancy-gitops.git
+    targetRevision: rosa-useast-mq
     helm:
       valueFiles:
       - values.yaml
