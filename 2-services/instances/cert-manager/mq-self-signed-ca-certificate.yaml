@@ -7,7 +7,7 @@ spec:
   isCA: true
   dnsNames:
     - >-
-      *.gitops-sandbox2-6ccd7f378ae819553d37d5f2ee142bd6-0000.tor01.containers.appdomain.cloud
+      *.rosa-east-2.05q1.p1.openshiftapps.com
   secretName: mq-self-signed-ca-cert
   issuerRef:
     group: cert-manager.io
