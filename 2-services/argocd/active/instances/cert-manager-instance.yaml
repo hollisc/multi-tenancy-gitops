@@ -11,7 +11,4 @@ spec:
     path: 2-services/instances/cert-manager
     repoURL: https://github.com/hollisc/multi-tenancy-gitops.git
     targetRevision: rosa-useast-mq
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+  syncPolicy: {}
