@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cert-manager-instance
+spec:
+  destination:
+    namespace: cert-manager
+    server: 'https://kubernetes.default.svc'
+  project: services
+  source:
+    path: 2-services/instances/cert-manager-yaml
+    repoURL: https://github.com/hollisc/multi-tenancy-gitops.git
+    targetRevision: rosa-useast-mq
+  syncPolicy: {}
