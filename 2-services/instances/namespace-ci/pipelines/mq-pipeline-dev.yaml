@@ -16,7 +16,7 @@ spec:
       default: "true"
     - name: environment
       description: environment
-      default: dev
+      default: namespace-dev
     - name: app-type
       description: Service
       default: 2-services/instances

@@ -17,14 +17,14 @@ spec:
       default: "true"
     - name: environment
       description: environment
-      default: dev
+      default: namespace-dev
     - name: app-type
       description: Application
       default: 1-apps
   tasks:
     - name: setup
       taskRef:
-        name: ibm-setup-v2-5-0
+        name: ibm-setup-v2-6-13
       params:
         - name: git-url
           value: $(params.git-url)
@@ -34,7 +34,7 @@ spec:
           value: $(params.scan-image)
     - name: test
       taskRef:
-        name: ibm-java-maven-test-v2-5-0
+        name: ibm-java-maven-test-v2-6-13
       runAfter:
         - setup
       params:
@@ -104,7 +104,7 @@ spec:
           value: "$(tasks.setup.results.health-curl)"
     - name: tag-release
       taskRef:
-        name: ibm-tag-release-v2-5-0
+        name: ibm-tag-release-v2-6-13
       runAfter:
         - smoke-tests
       params:
@@ -118,7 +118,7 @@ spec:
           value: "$(tasks.setup.results.js-image)"
     - name: img-release
       taskRef:
-        name: ibm-img-release-v2-5-0
+        name: ibm-img-release-v2-6-13
       runAfter:
         - tag-release
       params:
@@ -128,7 +128,7 @@ spec:
           value: "$(tasks.setup.results.image-release):$(tasks.tag-release.results.tag)"
     - name: img-scan
       taskRef:
-        name: ibm-img-scan-v2-5-0
+        name: ibm-img-scan-v2-6-13
       runAfter:
         - img-release
       params:
@@ -140,7 +140,7 @@ spec:
           value: $(tasks.setup.results.scan-ibm)
     - name: helm-release
       taskRef:
-        name: ibm-helm-release-v2-5-0
+        name: ibm-helm-release-v2-6-13
       runAfter:
         - img-scan
       params:
