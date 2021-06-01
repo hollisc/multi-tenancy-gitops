@@ -76,37 +76,37 @@ spec:
         - name: GIT_PARENT_DIR
           valueFrom:
             configMapKeyRef:
-              name: gitops-repo-hp
+              name: gitops-repo
               key: parentdir
               optional: true
         - name: GIT_PROTOCOL
           valueFrom:
             configMapKeyRef:
-              name: gitops-repo-hp
+              name: gitops-repo
               key: protocol
               optional: true
         - name: GIT_HOST
           valueFrom:
             configMapKeyRef:
-              name: gitops-repo-hp
+              name: gitops-repo
               key: host
               optional: true
         - name: GIT_ORG
           valueFrom:
             configMapKeyRef:
-              name: gitops-repo-hp
+              name: gitops-repo
               key: org
               optional: true
         - name: GIT_REPO
           valueFrom:
             configMapKeyRef:
-              name: gitops-repo-hp
+              name: gitops-repo
               key: repo
               optional: true
         - name: GIT_BRANCH
           valueFrom:
             configMapKeyRef:
-              name: gitops-repo-hp
+              name: gitops-repo
               key: branch
               optional: true
       script: |
