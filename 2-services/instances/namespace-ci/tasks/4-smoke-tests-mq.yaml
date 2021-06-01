@@ -208,6 +208,8 @@ spec:
             fi
             echo -n "${target}" | cut -f1 -d / | tee $(results.resource-type.path)
           done
+      securityContext:
+        privileged: true          
     - name: health-check
       image: $(params.tools-image)
       script: |
