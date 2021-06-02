@@ -97,6 +97,8 @@ spec:
               name: ibmcloud-config
               key: INGRESS_SUBDOMAIN
               optional: true
+      securityContext:
+        privileged: true      
       script: |
           #!/usr/bin/env bash
           set -ex

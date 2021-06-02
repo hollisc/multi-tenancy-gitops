@@ -38,6 +38,12 @@ rules:
     resources:
       - securitycontextconstraints
   - verbs:
+    - '*'
+  apiGroups:
+    - 'mq.ibm.com'
+  resources:
+    - queuemanagers
+  - verbs:
       - '*'
     apiGroups:
       - 'operator.cert-manager.io'
