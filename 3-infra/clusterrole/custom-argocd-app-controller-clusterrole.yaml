@@ -39,9 +39,9 @@ rules:
       - securitycontextconstraints
   - verbs:
     - '*'
-  apiGroups:
+    apiGroups:
     - 'mq.ibm.com'
-  resources:
+    resources:
     - queuemanagers
   - verbs:
       - '*'
