@@ -48,7 +48,7 @@ spec:
           value: "$(tasks.setup.results.app-name)"
     - name: build
       taskRef:
-        name: ibm-build-tag-push
+        name: ibm-build-tag-push-v2-6-13
       runAfter:
         - test
       params:
