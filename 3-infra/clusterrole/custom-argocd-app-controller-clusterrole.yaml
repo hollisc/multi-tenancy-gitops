@@ -46,6 +46,12 @@ rules:
   - verbs:
       - '*'
     apiGroups:
+      - 'mq.ibm.com'
+    resources:
+      - QueueManager
+  - verbs:
+      - '*'
+    apiGroups:
       - 'operator.cert-manager.io'
     resources:
       - certmanagers
@@ -55,7 +61,7 @@ rules:
       - 'cert-manager.io'
     resources:
       - clusterissuers
-      - certificates   
+      - certificates
   - verbs:
       - '*'
     apiGroups:
