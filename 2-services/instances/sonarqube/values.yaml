@@ -60,7 +60,7 @@ setup-job:
 tool-config:
   name: SonarQube
   url: 'https://sonarqube-tools.apps.rosa-east-2.05q1.p1.openshiftapps.com'
-  privateUrl: 'http://sonarqube-artifactory.tools:9000'
+  privateUrl: 'http://sonarqube-sonarqube.tools:9000'
   username: admin
   password: admin
   applicationMenu: true
