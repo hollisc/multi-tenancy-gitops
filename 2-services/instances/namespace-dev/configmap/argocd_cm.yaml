@@ -1,6 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: argocd-config
-data:
-  ARGOCD_URL: https://argocd-cluster-server-openshift-gitops.apps.rosa-east-2.05q1.p1.openshiftapps.com
