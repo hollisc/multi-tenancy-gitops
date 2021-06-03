@@ -49,33 +49,21 @@ spec:
         - name: GIT_PROTOCOL
           valueFrom:
             configMapKeyRef:
-              name: git-repo
+              name: gitops-repo
               key: protocol
               optional: true
         - name: GIT_HOST
           valueFrom:
             configMapKeyRef:
-              name: git-repo
+              name: gitops-repo
               key: host
               optional: true
         - name: GIT_ORG
           valueFrom:
             configMapKeyRef:
-              name: git-repo
+              name: gitops-repo
               key: org
               optional: true
-        # - name: GIT_REPO
-        #   valueFrom:
-        #     configMapKeyRef:
-        #       name: git-repo
-        #       key: repo
-        #       optional: true
-        # - name: GIT_BRANCH
-        #   valueFrom:
-        #     configMapKeyRef:
-        #       name: git-repo
-        #       key: branch
-        #       optional: true
       script: |
           #!/usr/bin/env bash
           set -ex
