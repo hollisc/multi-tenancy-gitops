@@ -1,3 +1,4 @@
 global: {}
 mq-infra:
+  name: qm-prod
   replicaCount: 1
