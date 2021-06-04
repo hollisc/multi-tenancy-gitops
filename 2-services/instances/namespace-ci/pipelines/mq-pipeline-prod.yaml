@@ -15,7 +15,7 @@ spec:
       description: Enable the pipeline to scan the image for vulnerabilities
       default: "true"
     - name: environment
-      description: Development environment
+      description: Production environment
       default: namespace-prod
     - name: app-type
       description: Please choose the right type (Apps, Services, Infra)
