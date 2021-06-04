@@ -93,6 +93,9 @@ spec:
           IMAGE_URL="${IMAGE_SERVER}/${IMAGE_NAMESPACE}/${IMAGE_REPOSITORY}"
 
           echo ${IMAGE_URL}:${IMAGE_VERSION}
+
+          git checkout -b cntk-ci-pipeline-${IMAGE_REPOSITORY}-${IMAGE_VERSION}
+          
           # update value for key applicationImage
           sed -i "/repository:/c\  repository:  ${IMAGE_URL}" ./values.yaml
           sed -i "/tag:/c\  tag: ${IMAGE_VERSION}" ./values.yaml
@@ -104,8 +107,6 @@ spec:
             echo "No changes"
             exit 0
           fi
-
-          git checkout -b cntk-ci-pipeline-${IMAGE_REPOSITORY}-${IMAGE_VERSION}
 
           # push changes to git
           git add values.yaml
