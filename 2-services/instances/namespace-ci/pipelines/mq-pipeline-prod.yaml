@@ -16,7 +16,7 @@ spec:
       default: "true"
     - name: environment
       description: Development environment
-      default: prod
+      default: namespace-prod
     - name: app-type
       description: Please choose the right type (Apps, Services, Infra)
       default: 2-services/instances
