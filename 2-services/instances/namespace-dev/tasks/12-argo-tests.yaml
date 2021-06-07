@@ -37,19 +37,19 @@ spec:
         - name: ARGO_USER
           valueFrom:
             secretKeyRef:
-              name: argocd-access-credentials
-              key: username
+              name: argocd-access-creds
+              key: ARGOCD_USERNAME
               optional: true
         - name: ARGO_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: argocd-access-credentials
-              key: password
+              name: argocd-access-creds
+              key: ARGOCD_PASSWORD
               optional: true
         - name: ARGO_URL
           valueFrom:
-            configMapKeyRef:
-              name: argocd-config
+            secretKeyRef:
+              name: argocd-access-creds
               key: ARGOCD_URL
               optional: true
       script: |
