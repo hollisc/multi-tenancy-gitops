@@ -17,7 +17,7 @@ spec:
       default: "true"
     - name: environment
       description: environment
-      default: staging
+      default: namespace-staging
     - name: app-type
       description: Application
       default: 1-apps
