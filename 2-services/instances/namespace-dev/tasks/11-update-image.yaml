@@ -46,24 +46,6 @@ spec:
               name: git-credentials
               key: password
               optional: true
-        # - name: GIT_PROTOCOL
-        #   valueFrom:
-        #     configMapKeyRef:
-        #       name: gitops-repo
-        #       key: protocol
-        #       optional: true
-        # - name: GIT_HOST
-        #   valueFrom:
-        #     configMapKeyRef:
-        #       name: gitops-repo
-        #       key: host
-        #       optional: true
-        # - name: GIT_ORG
-        #   valueFrom:
-        #     configMapKeyRef:
-        #       name: gitops-repo
-        #       key: org
-        #       optional: true
       script: |
           #!/usr/bin/env bash
           set -ex
