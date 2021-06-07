@@ -73,10 +73,9 @@ spec:
             BRANCH_CMD="-b $(params.git-branch)"
           fi
 
-          url="$(params.git-url)"
           regex="^(https|git)(:\/\/|@)([^\/:]+)[\/:]([^\/:]+)\/(.+).git$"
 
-          if [[ $url =~ $re ]]; then
+          if [[ $(params.git-url) =~ $re ]]; then
               GIT_PROTOCOL=${BASH_REMATCH[1]}
               GIT_SEPARATOR=${BASH_REMATCH[2]}
               GIT_HOST=${BASH_REMATCH[3]}
@@ -86,8 +85,6 @@ spec:
               echo "Please provide a valid git url"
               exit 1
           fi
-
-          # GIT_REPO=$(basename $(params.git-url) .git)
 
           git config --global user.email "gitops@cloudnativetoolkit.dev"
           git config --global user.name "Cloud Native Toolkit Pipeline"
