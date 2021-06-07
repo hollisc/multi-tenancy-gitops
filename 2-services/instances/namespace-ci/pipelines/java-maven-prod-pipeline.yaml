@@ -17,10 +17,10 @@ spec:
       default: "true"
     - name: environment
       description: environment
-      default: prod
+      default: namespace-prod
     - name: app-type
       description: Application
-      default: 1-apps
+      default: 1-apps/instances
   tasks:
     - name: setup
       taskRef:
