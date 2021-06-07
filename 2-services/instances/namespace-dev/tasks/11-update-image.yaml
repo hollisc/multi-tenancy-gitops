@@ -73,7 +73,7 @@ spec:
             BRANCH_CMD="-b $(params.git-branch)"
           fi
 
-          url=$(params.git-url)
+          url="$(params.git-url)"
           regex="^(https|git)(:\/\/|@)([^\/:]+)[\/:]([^\/:]+)\/(.+).git$"
 
           if [[ $url =~ $re ]]; then
