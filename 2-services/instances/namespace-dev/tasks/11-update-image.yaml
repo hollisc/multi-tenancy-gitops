@@ -46,24 +46,24 @@ spec:
               name: git-credentials
               key: password
               optional: true
-        - name: GIT_PROTOCOL
-          valueFrom:
-            configMapKeyRef:
-              name: gitops-repo
-              key: protocol
-              optional: true
-        - name: GIT_HOST
-          valueFrom:
-            configMapKeyRef:
-              name: gitops-repo
-              key: host
-              optional: true
-        - name: GIT_ORG
-          valueFrom:
-            configMapKeyRef:
-              name: gitops-repo
-              key: org
-              optional: true
+        # - name: GIT_PROTOCOL
+        #   valueFrom:
+        #     configMapKeyRef:
+        #       name: gitops-repo
+        #       key: protocol
+        #       optional: true
+        # - name: GIT_HOST
+        #   valueFrom:
+        #     configMapKeyRef:
+        #       name: gitops-repo
+        #       key: host
+        #       optional: true
+        # - name: GIT_ORG
+        #   valueFrom:
+        #     configMapKeyRef:
+        #       name: gitops-repo
+        #       key: org
+        #       optional: true
       script: |
           #!/usr/bin/env bash
           set -ex
@@ -73,7 +73,21 @@ spec:
             BRANCH_CMD="-b $(params.git-branch)"
           fi
 
-          GIT_REPO=$(basename $(params.git-url) .git)
+          url=$(params.git-url)
+          regex="^(https|git)(:\/\/|@)([^\/:]+)[\/:]([^\/:]+)\/(.+).git$"
+
+          if [[ $url =~ $re ]]; then
+              GIT_PROTOCOL=${BASH_REMATCH[1]}
+              GIT_SEPARATOR=${BASH_REMATCH[2]}
+              GIT_HOST=${BASH_REMATCH[3]}
+              GIT_ORG=${BASH_REMATCH[4]}
+              GIT_REPO=${BASH_REMATCH[5]}
+          else
+              echo "Please provide a valid git url"
+              exit 1
+          fi
+
+          # GIT_REPO=$(basename $(params.git-url) .git)
 
           git config --global user.email "gitops@cloudnativetoolkit.dev"
           git config --global user.name "Cloud Native Toolkit Pipeline"
