@@ -5,4 +5,4 @@ metadata:
 spec:
   backgroundColor: teal
   location: BannerTop
-  text: Cluster description
+  text: Test GitOps on OCP 47
