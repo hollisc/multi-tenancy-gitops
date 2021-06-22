@@ -29,21 +29,21 @@ resources:
 - argocd/instances/sealed-secrets-instance.yaml
 
 # CICD
-#- argocd/operators/grafana.yaml
-#- argocd/instances/grafana-instance.yaml
-#- argocd/instances/artifactory.yaml
-#- argocd/instances/chartmuseum.yaml
-#- argocd/instances/developer-dashboard.yaml
-#- argocd/instances/swaggereditor.yaml
-#- argocd/instances/sonarqube.yaml
-#- argocd/instances/pact-broker.yaml
-#- argocd/instances/cntk-pipeline-tasks.yaml
+- argocd/operators/grafana.yaml
+- argocd/instances/grafana-instance.yaml
+- argocd/instances/artifactory.yaml
+- argocd/instances/chartmuseum.yaml
+- argocd/instances/developer-dashboard.yaml
+- argocd/instances/swaggereditor.yaml
+- argocd/instances/sonarqube.yaml
+- argocd/instances/pact-broker.yaml
+- argocd/instances/cntk-pipeline-tasks.yaml
 # In OCP 4.7+ we need to install openshift-pipelines
 #- argocd/operators/openshift-pipelines.yaml
 
 # Service Mesh
-#- argocd/operators/elasticsearch.yaml
-#- argocd/operators/jaeger.yaml
-#- argocd/operators/kiali.yaml
-#- argocd/operators/openshift-service-mesh.yaml
-#- argocd/instances/openshift-service-mesh-instance.yaml
+- argocd/operators/elasticsearch.yaml
+- argocd/operators/jaeger.yaml
+- argocd/operators/kiali.yaml
+- argocd/operators/openshift-service-mesh.yaml
+- argocd/instances/openshift-service-mesh-instance.yaml
