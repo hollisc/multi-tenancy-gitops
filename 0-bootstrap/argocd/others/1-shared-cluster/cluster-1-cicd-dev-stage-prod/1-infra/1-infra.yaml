@@ -5,7 +5,7 @@ metadata:
   name: infra
 spec:
   sourceRepos:
-  - https://github.com/cloud-native-toolkit/multi-tenancy-gitops.git
+  - https://github.com/hollisc/multi-tenancy-gitops.git
   - https://github.com/cloud-native-toolkit/multi-tenancy-gitops-infra.git
   destinations:
   - namespace: ace
@@ -61,8 +61,8 @@ spec:
   project: default
   source:
     path: 0-bootstrap/argocd/others/1-shared-cluster/cluster-1-cicd-dev-stage-prod/1-infra
-    repoURL: https://github.com/cloud-native-toolkit/multi-tenancy-gitops.git
-    targetRevision: kustomize
+    repoURL: https://github.com/hollisc/multi-tenancy-gitops.git
+    targetRevision: hc-cluster1-kustomize2
   syncPolicy:
     automated:
       prune: true
