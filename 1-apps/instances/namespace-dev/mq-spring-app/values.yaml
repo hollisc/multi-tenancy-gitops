@@ -1,6 +1,6 @@
 global: {}
 mq-spring-app:
-  replicaCount: 1
+  replicaCount: 2
 
 configmap:
   CHANNEL: IBM.APP.SVRCONN
