@@ -5,6 +5,6 @@ mq-spring-app:
   configmap:
     CHANNEL: IBM.APP.SVRCONN
     CONNECTION_NAME: qm-dev-ibm-mq.dev.svc.cluster.local(1414)
-    QM: qmdev
+    QM: qmdev-gk
     QUEUE_NAME: IBM.DEMO.Q
     APP_NAME: MQ-SPRING-APP
