@@ -1,3 +1,10 @@
 global: {}
 mq-spring-app:
   replicaCount: 1
+
+configmap:
+  CHANNEL: IBM.APP.SVRCONN
+  CONNECTION_NAME: qm-dev-ibm-mq.dev.svc.cluster.local(1414)
+  QM: qmdev
+  QUEUE_NAME: IBM.DEMO.Q
+  APP_NAME: MQ-SPRING-APP
