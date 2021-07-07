@@ -1,7 +1,7 @@
 apiVersion: integration.ibm.com/v1beta1
 kind: PlatformNavigator
 metadata:
-  name: integration-quickstart
+  name: integration-navigator
 spec:
   license:
     accept: true
@@ -9,5 +9,5 @@ spec:
   mqDashboard: true
   version: 2021.2.1
   storage:
-    class: ''
+    class: ibmc-block-gold
   replicas: 2
