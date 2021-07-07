@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: dev-tasks
+  name: dev-hooks
   annotations:
     argocd.argoproj.io/sync-wave: "250"
   finalizers:
