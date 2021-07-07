@@ -3,5 +3,5 @@ kind: CertManager
 metadata:
   name: cert-manager-cntk
   annotations:
-    argocd.argoproj.io/sync-wave: "250"  
+    argocd.argoproj.io/sync-wave: "251"  
 spec: {}
