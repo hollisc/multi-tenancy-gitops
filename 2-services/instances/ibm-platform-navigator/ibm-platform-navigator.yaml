@@ -9,5 +9,5 @@ spec:
   mqDashboard: true
   version: 2021.2.1
   storage:
-    class: ibmc-block-gold
+    class: ibmc-file-gold
   replicas: 2
