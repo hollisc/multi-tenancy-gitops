@@ -15,4 +15,4 @@ spec:
         filter: header.match('X-GitHub-Event', 'push') && body.ref == 'refs/heads/ha' && body.repository.full_name == 'cloud-native-toolkit/mq-infra'
     name: mq-infra-dev
     template:
-      name: mq-infra-dev
+      ref: mq-infra-dev
