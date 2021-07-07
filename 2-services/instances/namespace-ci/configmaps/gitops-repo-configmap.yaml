@@ -1,13 +1,13 @@
 apiVersion: v1
 data:
-  branch: <branch>
+  branch: demo-mq-v2-ha-hc
   host: github.com
-  org: <github-org>
-  owner: <github-id>
+  org: hollisc
+  owner: hollisc
   parentdir: .
   protocol: https
   repo: multi-tenancy-gitops
-  url: https://github.com/<github-org>/multi-tenancy-gitops.git
+  url: https://github.com/hollisc/multi-tenancy-gitops.git
 kind: ConfigMap
 metadata:
   labels:
