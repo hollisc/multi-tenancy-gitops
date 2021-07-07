@@ -33,7 +33,7 @@ spec:
           value: $(params.scan-image)
     - name: build
       taskRef:
-        name: ibm-build-tag-push-v2-6-13
+        name: ibm-build-tag-push
       runAfter:
         - setup
       params:
