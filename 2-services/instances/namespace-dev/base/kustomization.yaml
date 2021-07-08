@@ -1,6 +1,2 @@
 resources:
   - hooks/post-sync.yaml
-  - mq-infra/Chart.yaml
-  - mq-infra/requirements.yaml
-  - mq-infra/values.yaml
-  
