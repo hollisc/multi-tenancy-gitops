@@ -1,4 +1,4 @@
 dependencies:
   - name: mq-infra
-    version: 0.0.58
+    version: 0.0.59
     repository: http://artifactory-artifactory.tools:8082/artifactory/generic-local/ci
