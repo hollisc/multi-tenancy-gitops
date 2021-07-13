@@ -119,8 +119,16 @@ instana-agent:
       autoMountConfigEntries: false
 
     configuration_yaml: |
-      com.instana.plugin.mongodb:
-        enabled: false  
+      com.instana.plugin.ibmmq:
+        enabled: true
+        poll_rate: 5
+        queueManagers:
+          qm-dev:
+            host: 'qm-dev-ibm-mq.dev.svc.cluster.local'
+            port: '1414'
+            channel: 'IBM.ADMIN.SVRCONN'
+            queuesRegex: 'APP.*'
+            availabilityZone: 'IBM MQ'
 
     # agent.redactKubernetesSecrets sets the INSTANA_KUBERNETES_REDACT_SECRETS environment variable.
     # redactKubernetesSecrets: null
