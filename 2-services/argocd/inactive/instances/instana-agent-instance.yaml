@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: instana-agent-instance
+  annotations:
+    argocd.argoproj.io/sync-wave: "250"
+  labels:
+    gitops.tier.group: cntk
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io    
+spec:
+  destination:
+    namespace: instana-agent
+    server: 'https://kubernetes.default.svc'
+  project: services
+  source:
+    path: 2-services/instances/instana-agent
+    repoURL: https://github.com/hollisc/multi-tenancy-gitops.git
+    targetRevision: demo-mq-v2-ha-hc
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
