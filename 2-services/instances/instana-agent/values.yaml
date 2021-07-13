@@ -129,6 +129,8 @@ instana-agent:
             host: 'qm-dev-ibm-mq.dev.svc.cluster.local'
             port: '1414'
             channel: 'IBM.APP.SVRCONN'
+            username: mqapp
+            password: app
             queuesRegex: 'IBM.DEMO.Q'
             availabilityZone: 'IBM MQ'  
 
