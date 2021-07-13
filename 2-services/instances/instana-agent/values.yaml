@@ -16,15 +16,15 @@ instana-agent:
     # specify its name in the `keysSecret` field. The secret you create must contains
     # a field called `key` and optionally one called `downloadKey`, which contain, respectively,
     # the values you'd otherwise set in `.agent.key` and `agent.downloadKey`.
-    keysSecret: 
+    keysSecret: instana-agent
 
     # agent.listenAddress is the IP address the agent HTTP server will listen to.
     # listenAddress: *
 
     # agent.endpointHost is the hostname of the Instana server your agents will connect to.
-    endpointHost: 
+    endpointHost: ec2-3-22-248-37.us-east-2.compute.amazonaws.com
     # agent.endpointPort is the port number (as a String) of the Instana server your agents will connect to.
-    endpointPort: 
+    endpointPort: 1414
 
     # use this to set additional environment variables for the instana agent
     # for example:
@@ -71,12 +71,25 @@ instana-agent:
       #com.instana.plugin.generic.hardware:
       #  enabled: true # disabled by default
       #  availability-zone: 'zone'
+      com.instana.plugin.ibmmq:
+        enabled: true
+        poll_rate: 5
+        queueManagers:
+          qm-dev:
+            host: 'qm-dev-ibm-mq.dev.svc.cluster.local'
+            port: '1414'
+            channel: 'IBM.ADMIN.SVRCONN'
+            username: 'mqmuser'
+            password: 'mqmuser'
+            queuesRegex: 'APP.*'
+            availabilityZone: 'IBM MQ'
+
     # agent.redactKubernetesSecrets sets the INSTANA_KUBERNETES_REDACT_SECRETS environment variable.
     # redactKubernetesSecrets: null
 
   cluster:
     # cluster.name represents the name that will be assigned to this cluster in Instana
-    name: 
+    name: roks-gitops-mq-ha-demo 
 
   # openshift specifies whether the cluster role should include openshift permissions and other tweaks to the YAML.
   # The chart will try to auto-detect if the cluster is OpenShift, so you will likely not even need to set this explicitly.
@@ -91,4 +104,4 @@ instana-agent:
 
   zone:
     # zone.name is the custom zone that detected technologies will be assigned to
-    name: 
+    name: tor-01
