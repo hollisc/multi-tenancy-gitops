@@ -1,4 +1,4 @@
 dependencies:
-  - name: mq-infra
-    version: 0.0.59
+  - name: mq-spring-app
+    version: 0.0.7
     repository: http://artifactory-artifactory.tools:8082/artifactory/generic-local/ci
