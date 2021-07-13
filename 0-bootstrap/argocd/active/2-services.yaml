@@ -35,6 +35,10 @@ spec:
   # TODO: SCC needs to be moved to 1-infra, here for now for artifactory
   - group: "security.openshift.io"
     kind: SecurityContextConstraints
+  - group: "rbac.authorization.k8s.io"
+    kind: ClusterRole
+  - group: "rbac.authorization.k8s.io"
+    kind: ClusterRoleBinding    
   - group: "console.openshift.io"
     kind: ConsoleLink
   - group: "apps"
