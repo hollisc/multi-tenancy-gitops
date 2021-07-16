@@ -1,10 +1,9 @@
 apiVersion: cert-manager.io/v1alpha3
 kind: ClusterIssuer
 metadata:
-  name: selfsigned-cluster-issuer
-  annotations:
-    argocd.argoproj.io/sync-wave: "257"
+  name: selfsigned-mq-cluster-issuer
   labels:
     gitops.tier.group: cntk
 spec:
-  selfSigned: {}
+  ca:
+    secretName: mq-self-signed-ca-cert
