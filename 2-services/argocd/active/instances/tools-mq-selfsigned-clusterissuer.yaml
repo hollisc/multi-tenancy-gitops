@@ -1,18 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: tools-clusterissuer
+  name: tools-mq-selfsigned-clusterissuer
   annotations:
-    argocd.argoproj.io/sync-wave: "255"
+    argocd.argoproj.io/sync-wave: "265"
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: tools
+    namespace: openshift-operators
     server: https://kubernetes.default.svc
   project: services
   source:
-    path: 2-services/instances/namespace-tools/selfsigned-clusterissuer
+    path: 2-services/instances/namespace-tools/mq-selfsigned-clusterissuer
     repoURL: https://github.com/hollisc/multi-tenancy-gitops.git
     targetRevision: demo-mq-v2-hc-test
   syncPolicy:
