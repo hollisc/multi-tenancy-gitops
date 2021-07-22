@@ -1,4 +1,4 @@
 dependencies:
   - name: mq-spring-app
-    version: 0.0.7
+    version: 0.0.8
     repository: http://artifactory-artifactory.tools:8082/artifactory/generic-local/ci
